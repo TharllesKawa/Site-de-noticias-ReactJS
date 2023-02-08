@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { motion, useScroll } from "framer-motion"
 
 
 const NewsCardOrganization = styled.div`
@@ -86,8 +87,14 @@ const News = () => {
       }, []);
 
         return (
-        <div>
-            <NewsTitleH1>Novas Notícias</NewsTitleH1>
+        <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        >
+                <NewsTitleH1>Novas Notícias</NewsTitleH1>
                 <NewsCardOrganization >
                 {news.map(article => (
                     <NewsCardContainer key={article.title} className='animation'>
@@ -97,7 +104,7 @@ const News = () => {
                   </NewsCardContainer>
               ))}
                 </NewsCardOrganization>
-        </div>
+        </motion.div>
         );
       }
 
