@@ -94,7 +94,7 @@ const News = () => {
         viewport={{ once: true }}
         transition={{ duration: 1 }}
         >
-                <NewsTitleH1>Novas Notícias</NewsTitleH1>
+                <NewsTitleH1>Novas Notíciasg</NewsTitleH1>
                 <NewsCardOrganization >
                 {news.map(article => (
                     <NewsCardContainer key={article.title} className='animation'>
