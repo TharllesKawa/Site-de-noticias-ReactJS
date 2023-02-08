@@ -19,3 +19,7 @@ Axios
 Framer Motion - Para animações no site
 
 
+
+## Screenshots
+
+![App Screenshot](https://images2.imgbox.com/71/05/qWB24Qdx_o.png)
